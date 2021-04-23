@@ -1,0 +1,53 @@
+@import 'variables';
+
+body {
+  min-width: 320px;
+  font-size: 18px;
+  line-height: 23px;
+  font-weight: 400;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  background-color: transparent;
+  text-decoration: none;
+  color: inherit;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.wrapper {
+  position: relative;
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  @media (min-width: $tablet-width) {
+    min-width: $tablet-width;
+    padding: 0 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: $desktop-width;
+    max-width: 1170px;
+  }
+}
