@@ -1,0 +1,19 @@
+.header {
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+
+  background-color: $second-background-color;
+}
+
+@media (min-width: $tablet-width) {
+  .header {
+    min-height: 69px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .header {
+    min-height: 91px;
+  }
+}

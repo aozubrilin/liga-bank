@@ -1,0 +1,56 @@
+.login-button {
+  height: 23px;
+  padding-left: 14px;
+  background-color: transparent;
+  background-image: url('../../img/login.svg');
+  background-repeat: no-repeat;
+  background-position: 0 center;
+  background-size: 14px 16px;
+  border: none;
+  cursor: pointer;
+
+  .login-button__text {
+    display: none;
+  }
+}
+
+.login-button--menu {
+  padding-left: 30px;
+  background-position: left center;
+  background-size: 20px 22px;
+
+  .login-button__text {
+    display: block;
+    font-size: 16px;
+    line-height: 19px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .login-button {
+    width: 20px;
+    height: 22px;
+    padding: 0;
+    background-size: 20px 22px;
+
+    .login-button__text {
+      display: none;
+    }
+  }
+
+  .login-button--top {
+    display: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .login-button {
+    background-position: left center;
+    min-width: 204px;
+
+    .login-button__text {
+      padding-left: 30px;
+      display: block;
+    }
+  }
+}

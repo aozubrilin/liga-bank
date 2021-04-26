@@ -1,4 +1,12 @@
 @import 'global/variables';
 @import 'global/normalize';
+@import 'global/mixins';
 @import 'global/fonts';
 @import 'global/scaffolding';
+@import 'blocks/header';
+@import 'blocks/main-nav';
+@import 'blocks/toggle';
+@import 'blocks/logo';
+@import 'blocks/nav';
+@import 'blocks/login-button';
+@import 'blocks/close-button';

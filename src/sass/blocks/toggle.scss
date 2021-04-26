@@ -1,0 +1,19 @@
+.toggle {
+  width: 16px;
+  height: 12px;
+  margin: 0;
+  padding: 0;
+  background-image: url('../../img/toggle-menu.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+
+  outline: none;
+  cursor: pointer;
+  border: none;
+}
+
+@media (min-width: $tablet-width) {
+  .toggle {
+    display: none;
+  }
+}

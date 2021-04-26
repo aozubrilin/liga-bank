@@ -2,15 +2,18 @@
 
 body {
   min-width: 320px;
-  font-size: 18px;
   line-height: 23px;
   font-weight: 400;
+  overflow-x: hidden;
 }
 
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  font-family: 'Roboto', 'Arial', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 img {
@@ -37,17 +40,18 @@ a {
 
 .wrapper {
   position: relative;
-  min-width: 320px;
+  width: 100%;
   margin: 0 auto;
   padding: 0 15px;
 
   @media (min-width: $tablet-width) {
-    min-width: $tablet-width;
+    max-width: 768px;
     padding: 0 45px;
   }
 
   @media (min-width: $desktop-width) {
     min-width: $desktop-width;
-    max-width: 1170px;
+    max-width: 1366px;
+    padding: 0 98px;
   }
 }

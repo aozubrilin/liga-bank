@@ -1,0 +1,25 @@
+.logo {
+  cursor: pointer;
+  padding-left: 12px;
+}
+
+.logo__picture {
+  display: flex;
+}
+
+.logo__image {
+  width: auto;
+  height: 100%;
+}
+
+@media (min-width: $tablet-width) {
+  .logo {
+    padding-left: 0px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .logo {
+    margin-bottom: 13px;
+  }
+}
