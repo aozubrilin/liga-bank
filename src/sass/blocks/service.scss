@@ -1,0 +1,246 @@
+.service {
+  min-height: 362px;
+  background-color: $second-background-color;
+  background-repeat: no-repeat;
+  background-position: right 39.2%;
+
+  &--deposits {
+    background-image: url('../../img/service-piggybank-mobile.png');
+  }
+  &--credits {
+    background-image: url('../../img/service-car-mobile.png');
+  }
+  &--insurance {
+    background-image: url('../../img/service-lock-mobile.png');
+  }
+  &--online-services {
+    background-image: url('../../img/service-mobile-mobile.png');
+  }
+}
+
+.service__wrapper {
+  padding-left: 4.6%;
+  padding-top: 55px;
+  padding-right: 4.6%;
+}
+
+.service__title {
+  max-width: 270px;
+  margin-bottom: 14px;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+  color: $font-black-color;
+}
+
+.service__list {
+  max-width: 230px;
+  margin-bottom: 20px;
+  list-style: none;
+}
+
+.service__item {
+  position: relative;
+
+  padding: 6px 0;
+  padding-left: 15px;
+  font-size: 14px;
+  line-height: 18px;
+  color: #1f1e25;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 10px;
+    height: 18px;
+    background-image: url('../../img/check-mark.svg');
+    background-repeat: no-repeat;
+    background-size: 10px 8px;
+    background-position: left center;
+  }
+}
+
+.service__description {
+  margin-top: -3px;
+  max-width: 275px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #1f1e25;
+}
+
+.service--online-services {
+  .service__title {
+    max-width: 225px;
+  }
+}
+
+.service--credits {
+  .service__title {
+    max-width: 235px;
+  }
+}
+
+.service__button {
+  @include button;
+  width: 290px;
+  min-height: 43px;
+}
+
+@media (min-width: $tablet-width) {
+  .service {
+    min-height: 380px;
+    background-position: 90.7% center;
+
+    &--deposits {
+      background-image: url('../../img/service-piggybank-tablet.png');
+    }
+
+    &--credits {
+      background-image: url('../../img/service-car-tablet.png');
+    }
+
+    &--insurance {
+      background-image: url('../../img/service-lock-tablet.png');
+    }
+    &--online-services {
+      background-image: url('../../img/service-mobile-tablet.png');
+    }
+  }
+
+  .service__wrapper {
+    padding-left: 5.8%;
+    padding-right: 5.8%;
+  }
+
+  .service__title {
+    max-width: 305px;
+    margin-bottom: 17px;
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  .service__list {
+    max-width: 352px;
+    margin-bottom: 24px;
+  }
+
+  .service__item {
+    padding: 7px 0;
+    padding-left: 21px;
+    font-size: 16px;
+    line-height: 21px;
+
+    &::before {
+      left: 0;
+      width: 14px;
+      height: 21px;
+      background-size: 13px 10px;
+    }
+  }
+
+  .service__description {
+    margin-top: 0;
+    max-width: 302px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .service__button {
+    width: 198px;
+    min-height: 48px;
+  }
+
+  .service--online-services {
+    .service__title {
+      max-width: 335px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .service {
+    background-position: 81.5% center;
+
+    &--deposits {
+      min-height: 410px;
+      background-image: url('../../img/service-piggybank-desktop.png');
+    }
+
+    &--credits {
+      min-height: 399px;
+      background-image: url('../../img/service-car-desktop.png');
+    }
+
+    &--insurance {
+      min-height: 387px;
+      background-image: url('../../img/service-lock-desktop.png');
+    }
+
+    &--online-services {
+      min-height: 395px;
+      background-image: url('../../img/service-mobile-desktop.png');
+    }
+  }
+
+  .service__wrapper {
+    padding-top: 53px;
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+
+  .service__title {
+    max-width: 372px;
+    margin-bottom: 22px;
+    font-size: 22px;
+    line-height: 31px;
+  }
+
+  .service__list {
+    max-width: 394px;
+    margin-bottom: 28px;
+  }
+
+  .service__item {
+    padding: 7px 0;
+    padding-left: 21px;
+    font-size: 18px;
+    line-height: 23px;
+
+    &::before {
+      left: 0;
+      width: 14px;
+      height: 21px;
+      background-size: 13px 10px;
+    }
+  }
+
+  .service__description {
+    margin-top: 0;
+    max-width: 350px;
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  .service__button {
+    font-size: 16px;
+    line-height: 19px;
+    min-height: 51px;
+  }
+
+  .service--credits {
+    .service__title {
+      max-width: 325px;
+    }
+
+    .service__list {
+      margin-bottom: 23px;
+    }
+  }
+
+  .service--online-services {
+    .service__title {
+      max-width: 408px;
+    }
+  }
+}

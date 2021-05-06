@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import Header from '../header/header';
 import '../../sass/style.scss';
+import Main from '../main/main';
 
 const App = () => {
-  return <Header />;
+  return (
+    <Fragment>
+      <Header />
+      <Main />
+    </Fragment>
+  );
 };
 
 export default App;

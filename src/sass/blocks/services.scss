@@ -1,0 +1,63 @@
+.services {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.services__bullet {
+  @include bullet;
+}
+
+.services__pagination {
+  display: none;
+}
+
+@media (min-width: $desktop-width) {
+  .services {
+    margin-top: 60px;
+  }
+  .services__pagination {
+    display: flex;
+  }
+
+  .services__bullet {
+    margin: 0;
+    min-height: 93px;
+    width: 25%;
+    border: none;
+    border-radius: 0;
+    background-color: transparent;
+    cursor: pointer;
+
+    &--active {
+      background-color: #f6f7ff;
+    }
+  }
+
+  .sevices__lable {
+    align-items: center;
+    padding: 15px 0;
+    padding-left: 45px;
+    min-height: 34px;
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 500;
+    color: #4c4b51;
+    background-repeat: no-repeat;
+    background-position: left center;
+
+    &--deposits {
+      background-image: url('../../img/tab-deposits.svg');
+    }
+    &--credits {
+      background-image: url('../../img/tab-credits.svg');
+    }
+    &--insurance {
+      padding-left: 39px;
+      background-image: url('../../img/tab-insurance.svg');
+    }
+    &--online-services {
+      padding-left: 30px;
+      background-image: url('../../img/tab-services.svg');
+    }
+  }
+}

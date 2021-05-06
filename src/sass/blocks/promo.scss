@@ -1,0 +1,183 @@
+.promo__bullet {
+  @include bullet;
+}
+
+.promo__bullet--active {
+  &:nth-child(1),
+  &:nth-child(2) {
+    background-color: $second-background-color;
+  }
+}
+
+.promo-item__wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding-left: 4.6%;
+  padding-top: 39px;
+}
+
+.promo-item {
+  margin: 0 auto;
+  min-height: 226px;
+
+  background-repeat: no-repeat;
+
+  &--credit {
+    background-color: $blue-color;
+    background-image: url('../../img/black-card.png');
+    background-size: auto 176px;
+    background-position: calc(40% + 190px) 30px;
+  }
+  &--man {
+    background-color: #dde2ec;
+    background-image: url('../../img/slider-man.png');
+
+    background-size: cover;
+    background-position: 65.5% 0;
+  }
+  &--branches {
+    background-color: #e6f1fe;
+    background-image: url('../../img/slider-girl.png');
+    background-size: cover;
+    background-position: 62.6% 0;
+  }
+}
+
+.promo-item__title {
+  margin-bottom: 6px;
+  font-size: 38px;
+  line-height: 45px;
+  font-weight: 700;
+  color: #1f1e25;
+}
+
+.promo-item__content {
+  max-width: 200px;
+  margin-bottom: 26px;
+  font-size: 16px;
+  line-height: 19px;
+  color: #2b3c4f;
+}
+
+.promo-item__button {
+  @include button;
+  width: 188px;
+  min-height: 43px;
+}
+
+.promo-item--credit {
+  .promo-item__title {
+    color: $second-background-color;
+  }
+
+  .promo-item__content {
+    color: #e0e1ea;
+  }
+
+  .promo-item__button {
+    color: $font-black-color;
+    background-color: $second-background-color;
+  }
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets {
+  bottom: 4px;
+}
+
+@media (min-width: $tablet-width) {
+  .promo-item {
+    min-height: 300px;
+
+    &--credit {
+      background-image: url('../../img/black-white-card-tablet.png'),
+        linear-gradient(183.47deg, rgba(56, 65, 255, 0) 27.26%, #3841ff 97.14%);
+      background-size: auto 232px, 179px 199px;
+      background-position: calc(60% + 101px) 38px, calc(103px + 60%) bottom;
+    }
+    &--man {
+      background-position: 61.7% 0;
+    }
+    &--branches {
+      background-position: 50% center;
+    }
+  }
+
+  .promo-item__wrapper {
+    padding-top: 65px;
+    padding-left: 11.2%;
+  }
+
+  .promo-item__title {
+    font-size: 46px;
+    line-height: 54px;
+  }
+
+  .promo-item__content {
+    max-width: 400px;
+    margin-bottom: 30px;
+    font-size: 18px;
+    line-height: 21px;
+  }
+
+  .promo-item__button {
+    width: 206px;
+    min-height: 48px;
+  }
+
+  .swiper-container-horizontal > .swiper-pagination-bullets {
+    bottom: 9px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .promo-item {
+    min-height: 400px;
+    background-size: unset;
+
+    &--credit {
+      background-image: url('../../img/slider-cards.png');
+      background-position: 50% center;
+    }
+    &--man {
+      background-image: url('../../img/slider-man.png'),
+        linear-gradient(to right, #dde2ec 50%, #f3faff 50%);
+      background-position: 50% center, center center;
+    }
+  }
+
+  .promo-item__wrapper {
+    padding-left: 170px;
+    padding-top: 102px;
+    padding-right: 0;
+  }
+
+  .promo-item__title {
+    margin-bottom: 8px;
+    font-size: 54px;
+    line-height: 63px;
+  }
+
+  .promo-item__content {
+    margin-bottom: 34px;
+    font-size: 22px;
+    line-height: 26px;
+  }
+
+  .promo-item__button {
+    width: 243px;
+    min-height: 53px;
+  }
+
+  .promo-item--credit {
+    .promo-item__button {
+      width: 234px;
+    }
+  }
+
+  .swiper-container-horizontal > .swiper-pagination-bullets {
+    bottom: 34px;
+  }
+}

@@ -3,3 +3,48 @@
   padding: 0;
   list-style: none;
 }
+
+@mixin button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-weight: 500;
+  font-size: 14px;
+  color: $second-background-color;
+
+  background-color: $blue-color;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 18px;
+  }
+}
+
+@mixin bullet {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin-left: 3px;
+  margin-right: 3px;
+
+  background-color: #2028b6;
+  border-radius: 50%;
+
+  &--active {
+    background-color: #e0e0e0;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 8px;
+    height: 8px;
+    margin-left: 4px;
+    margin-right: 4px;
+  }
+}
