@@ -45,13 +45,12 @@ a {
   padding: 0 15px;
 
   @media (min-width: $tablet-width) {
-    max-width: 768px;
     padding: 0 45px;
   }
 
   @media (min-width: $desktop-width) {
     min-width: $desktop-width;
-    max-width: 1366px;
+    max-width: $desktop-max-width;
     padding: 0 98px;
   }
 }

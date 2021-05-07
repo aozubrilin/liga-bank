@@ -22,13 +22,39 @@
 .nav__item a {
   font-size: 16px;
   line-height: 19px;
-  color: #1f1e25;
+  color: $font-black-color;
+}
+
+.nav--footer {
+  .nav__item {
+    padding: 3px 0px;
+    border-bottom: none;
+
+    &:first-child {
+      border-top: none;
+    }
+  }
+
+  .nav__item a {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+  }
+
+  .nav__item--login {
+    display: none;
+  }
 }
 
 @media (min-width: $tablet-width) {
   .nav {
     align-items: center;
     flex-direction: row;
+
+    &--footer {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 
   .nav__item {
@@ -49,6 +75,17 @@
     font-size: 14px;
     line-height: 16px;
   }
+
+  .nav--footer {
+    .nav__item {
+      padding: 4px 0px;
+    }
+
+    .nav__item a {
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
 }
 
 @media (min-width: $desktop-width) {
@@ -59,5 +96,15 @@
 
   .nav__item {
     margin-right: 25px;
+  }
+
+  .nav--footer {
+    .nav__item {
+      margin-right: 0;
+
+      &:nth-child(1) {
+        padding-top: 7px;
+      }
+    }
   }
 }

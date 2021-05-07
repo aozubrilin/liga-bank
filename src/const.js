@@ -5,6 +5,13 @@ export const HEADER_LINKS = [
   `Контакты`,
 ];
 
+export const FOOTER_LINKS = [
+  ` Услуги`,
+  ` Рассчитать кредит`,
+  ` Контакты`,
+  `Задать вопрос`,
+];
+
 export const PROMO__ITEMS = [
   {
     mod: `--credit`,

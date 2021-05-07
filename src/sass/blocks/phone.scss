@@ -1,0 +1,58 @@
+.phone {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.phone__icon {
+  position: absolute;
+  top: 4px;
+}
+
+.phone__number {
+  padding-left: 29px;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+  color: $font-black-color;
+}
+
+.phone__description {
+  max-width: 196px;
+  padding-left: 29px;
+  font-size: 12px;
+  line-height: 17px;
+  color: #707c87;
+}
+
+.phone--mobile {
+  .phone__number {
+    padding-left: 33px;
+  }
+
+  .phone__description {
+    max-width: 160px;
+    padding-left: 33px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .phone__description {
+    max-width: 196px;
+    padding-left: 15%;
+    font-size: 12px;
+    line-height: 17px;
+    color: #707c87;
+  }
+
+  .phone--mobile {
+    .phone__number {
+      padding-left: 20%;
+    }
+
+    .phone__description {
+      max-width: 152px;
+      padding-left: 20%;
+    }
+  }
+}

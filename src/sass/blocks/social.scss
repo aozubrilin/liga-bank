@@ -1,0 +1,14 @@
+.social {
+  display: flex;
+  justify-content: space-between;
+  max-width: 117px;
+  list-style: none;
+  padding: 0;
+}
+
+@media (min-width: $desktop-width) {
+  .social {
+    min-width: 16.5%;
+    flex-basis: 16.5%;
+  }
+}
