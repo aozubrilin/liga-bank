@@ -1,17 +1,31 @@
 import React from 'react';
-import SwiperSlider from '../swiper-slider/swiper-slider';
+import { Carousel } from 'react-responsive-carousel';
 import { PROMO__ITEMS } from '../../const';
 import PromoItem from '../promo-item/promo-item';
+import SliderBullet from '../slider-bullet/slider-bullet';
 
 const Promo = () => {
-  const promoItems = PROMO__ITEMS.map((item) => {
-    return <PromoItem {...item} />;
+  const promoItems = PROMO__ITEMS.map((item, index) => {
+    return <PromoItem key={index} {...item} />;
   });
 
   return (
     <section className="promo">
       <h2 className="visually-hidden">Предложения банка</h2>
-      <SwiperSlider slides={promoItems} type="promo" />
+      <Carousel
+        interval={4000}
+        autoPlay
+        infiniteLoop
+        showArrows={false}
+        showThumbs={false}
+        showStatus={false}
+        stopOnHover={false}
+        renderIndicator={(_onClickHandler, isSelected, index) => (
+          <SliderBullet isSelected={isSelected} index={index} />
+        )}
+      >
+        {promoItems}
+      </Carousel>
     </section>
   );
 };

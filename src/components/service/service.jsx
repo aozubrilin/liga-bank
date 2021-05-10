@@ -1,6 +1,13 @@
 import React from 'react';
 
-const Service = ({ mod, title, lists, button, description }) => {
+const Service = ({
+  mod,
+  title,
+  lists,
+  button,
+  description,
+  descriptionLink,
+}) => {
   return (
     <div className={`service service${mod}`}>
       <div className="service__wrapper">
@@ -14,7 +21,14 @@ const Service = ({ mod, title, lists, button, description }) => {
             );
           })}
         </ul>
-        {description && <p className="service__description">{description}</p>}
+        {description && (
+          <p className="service__description">
+            {description}
+            <a className="service__description--link" href="/">
+              {descriptionLink}
+            </a>
+          </p>
+        )}
         {button && (
           <a href={button.href} className="service__button">
             {button.text}

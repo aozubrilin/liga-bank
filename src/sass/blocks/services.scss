@@ -3,23 +3,23 @@
   margin: 0 auto;
 }
 
-.services__bullet {
-  @include bullet;
-}
-
-.services__pagination {
+.services__tabs {
   display: none;
 }
 
 @media (min-width: $desktop-width) {
   .services {
     margin-top: 60px;
+
+    .carousel .control-dots {
+      display: none;
+    }
   }
-  .services__pagination {
+  .services__tabs {
     display: flex;
   }
 
-  .services__bullet {
+  .services__tab {
     margin: 0;
     min-height: 93px;
     width: 25%;
@@ -33,7 +33,7 @@
     }
   }
 
-  .sevices__lable {
+  .services__lable {
     align-items: center;
     padding: 15px 0;
     padding-left: 45px;
