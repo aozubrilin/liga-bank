@@ -1,0 +1,183 @@
+.form-credit__fields {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-credit__fields {
+  padding: 0;
+  border: none;
+
+  &--step-2 {
+    margin-top: 25px;
+    margin-bottom: 0px;
+
+    .form-credit__legend {
+      margin-bottom: 9px;
+    }
+
+    .form-credit__field {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 9px;
+    }
+  }
+}
+
+.form-credit__field {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-credit__label {
+  margin-bottom: 9px;
+}
+
+.form-credit__input {
+  padding-left: 40px;
+  padding-right: 40px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.form-credit__legend {
+  margin-bottom: 14px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.form-credit__input-operation {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.form-credit__button-operation {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+  @include hover;
+  @include active;
+
+  &--increment {
+    right: 5px;
+  }
+
+  &--decrement {
+    left: 14px;
+  }
+}
+
+.form-credit__description {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #707c87;
+}
+
+.form-credit__input-range {
+  margin-top: 21px;
+  margin-bottom: 5px;
+}
+
+.form-credit__field-checkbox {
+  margin-top: 11px;
+  @include hover;
+  @include active;
+}
+
+.form-credit__label-checkbox {
+  position: relative;
+  padding-left: 24px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #1f1e25;
+
+  cursor: pointer;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #2c36f2;
+  }
+}
+
+.form-credit__checkbox:checked ~ .form-credit__label-checkbox::before {
+  background-image: url('../../img/checkbox.svg');
+  background-repeat: no-repeat;
+  border: none;
+}
+
+@media (min-width: $tablet-width) {
+  .form-credit__legend {
+    margin-bottom: 18px;
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  .form-credit__fields {
+    &--step-2 {
+      margin-top: 35px;
+      margin-bottom: 0px;
+
+      .form-credit__legend {
+        margin-bottom: 13px;
+      }
+
+      .form-credit__field {
+        margin-bottom: 14px;
+      }
+    }
+  }
+
+  .form-credit__button-operation {
+    &--decrement {
+      left: 14px;
+    }
+
+    &--increment {
+      right: 14px;
+    }
+  }
+
+  .form-credit__field-checkbox {
+    margin-top: 16px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .form-credit__legend {
+    margin-bottom: 22px;
+    font-size: 22px;
+    line-height: 31px;
+  }
+
+  .form-credit__fields {
+    &--step-2 {
+      margin-top: 33px;
+      margin-bottom: 0px;
+
+      .form-credit__legend {
+        margin-bottom: 17px;
+      }
+
+      .form-credit__field {
+        margin-bottom: 19px;
+      }
+    }
+  }
+
+  .form-credit__field-checkbox {
+    margin-top: 20px;
+  }
+}

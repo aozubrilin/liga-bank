@@ -1,7 +1,6 @@
 @import 'global/variables';
 @import 'global/normalize';
 @import 'global/mixins';
-@import 'global/fonts';
 @import 'global/scaffolding';
 @import 'blocks/header';
 @import 'blocks/main-nav';
@@ -19,3 +18,13 @@
 @import 'blocks/footer';
 @import 'blocks/phone';
 @import 'blocks/social';
+@import 'blocks/pop-up';
+@import 'blocks/login';
+@import 'blocks/form';
+@import 'blocks/calculator';
+@import 'blocks/form-credit';
+@import 'blocks/select';
+@import 'blocks/offer';
+@import 'blocks/request';
+@import 'blocks/succes';
+@import 'blocks/content';

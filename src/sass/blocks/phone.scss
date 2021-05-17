@@ -4,6 +4,11 @@
   flex-direction: column;
 }
 
+.phone__link {
+  @include hover;
+  @include active;
+}
+
 .phone__icon {
   position: absolute;
   top: 4px;

@@ -23,6 +23,10 @@
   font-size: 16px;
   line-height: 19px;
   color: $font-black-color;
+  &[href]:hover,
+  &[href]:focus {
+    opacity: 0.4;
+  }
 }
 
 .nav--footer {

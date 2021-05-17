@@ -10,6 +10,8 @@
   outline: none;
   cursor: pointer;
   border: none;
+  @include hover;
+  @include active;
 }
 
 @media (min-width: $tablet-width) {

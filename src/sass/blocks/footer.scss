@@ -1,4 +1,5 @@
 .footer {
+  flex: 0 0 auto;
   background-color: $second-background-color;
 }
 
@@ -30,6 +31,10 @@
 
 .footer__info {
   display: none;
+}
+
+.footer__info-text {
+  min-width: 253px;
 }
 
 .footer__phone {

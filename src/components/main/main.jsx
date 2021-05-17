@@ -1,14 +1,16 @@
 import React from 'react';
+import Calculator from '../calculator/calculator';
+import MapBranches from '../map-branches/map-branches';
 import Promo from '../promo/promo';
 import Services from '../services/services';
-import YandexMap from '../yandex-map/yandex-map';
 
 const Main = () => {
   return (
     <main className="content">
       <Promo />
       <Services />
-      <YandexMap />
+      <Calculator />
+      <MapBranches />
     </main>
   );
 };

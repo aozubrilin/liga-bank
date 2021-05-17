@@ -2,6 +2,7 @@
   min-width: 320px;
   max-width: 1366px;
   margin: 0 auto;
+  margin-bottom: 54px;
 }
 
 .map__branches-wrapper {
@@ -30,6 +31,7 @@
 @media (min-width: $tablet-width) {
   .map {
     padding: 0 45px;
+    margin-bottom: 73px;
   }
 
   .map__title {
@@ -48,6 +50,7 @@
 @media (min-width: $desktop-width) {
   .map {
     padding: 0 98px;
+    margin-bottom: 105px;
   }
   .map__title {
     margin-bottom: 55px;

@@ -6,12 +6,15 @@ import { FOOTER_LINKS } from '../../const';
 const Footer = () => {
   return (
     <section className="footer">
+      <h2 className="visually-hidden">Подвал сайта</h2>
       <div className="footer__wrapper wrapper">
         <div className="footer__left">
           <Logo className="footer__logo" />
           <div className="footer__info">
+            <address className="footer__info-text">
+              150015, г. Москва, ул. Московская, д. 32
+            </address>
             <p className="footer__info-text">
-              <address>150015, г. Москва, ул. Московская, д. 32</address>
               Генеральная лицензия Банка России №1050 Ⓒ Лига Банк, 2019
             </p>
           </div>

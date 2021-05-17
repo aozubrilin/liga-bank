@@ -1,11 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import logoDesktop from '../../img/logo-desktop.svg';
 import logoTablet from '../../img/logo-tablet.svg';
 import logoMobile from '../../img/logo-mobile.svg';
 
 const Logo = ({ className }) => {
   return (
-    <a className={`${className} logo`} href="/">
+    <div className={`${className} logo`}>
       <picture className="logo__picture">
         <source srcSet={logoDesktop} media="(min-width: 1024px)" />
         <source srcSet={logoTablet} media="(min-width: 768px)" />
@@ -17,8 +18,12 @@ const Logo = ({ className }) => {
           height="18"
         />
       </picture>
-    </a>
+    </div>
   );
+};
+
+Logo.propTypes = {
+  className: PropTypes.string.isRequired,
 };
 
 export default Logo;

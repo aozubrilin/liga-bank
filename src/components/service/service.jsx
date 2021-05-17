@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Service = ({
   mod,
@@ -24,7 +25,7 @@ const Service = ({
         {description && (
           <p className="service__description">
             {description}
-            <a className="service__description--link" href="/">
+            <a className="service__description-link" href="#calculator">
               {descriptionLink}
             </a>
           </p>
@@ -37,6 +38,13 @@ const Service = ({
       </div>
     </div>
   );
+};
+
+Service.propTypes = {
+  mod: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string,
+  descriptionLink: PropTypes.string,
 };
 
 export default Service;

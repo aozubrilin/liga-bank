@@ -1,0 +1,152 @@
+.login__wrapper {
+  display: flex;
+  width: 290px;
+  min-height: 455px;
+  padding: 46px 16px 40px;
+  border: 4px solid $blue-color;
+}
+
+.login__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 26px;
+}
+
+.login__logo {
+  margin-left: -5px;
+}
+
+.login__form {
+  display: flex;
+  flex-direction: column;
+
+  &--empty {
+    animation: bounce 1s ease-in-out;
+  }
+}
+
+.login__row {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 19px;
+}
+
+.login__label {
+  margin-bottom: 4px;
+}
+
+.login__password-show {
+  position: absolute;
+  top: 37px;
+  right: 12px;
+  width: 30px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  @include hover;
+  @include active;
+}
+
+.login__submit {
+  @include button;
+  min-height: 51px;
+  margin-top: 12px;
+  margin-bottom: 10px;
+}
+
+.login__error {
+  position: absolute;
+  top: 84px;
+  left: 6px;
+  font-size: 14px;
+  color: #ff0000;
+}
+
+.login__link-password {
+  order: 4;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  color: #707c87;
+  @include hover;
+  @include active;
+}
+
+@media (min-width: $tablet-width) {
+  .login__wrapper {
+    width: 678px;
+    min-height: 493px;
+    padding: 56px 84px 56px;
+  }
+
+  .login__header {
+    margin-bottom: 36px;
+  }
+
+  .login__logo {
+    margin-left: 0;
+  }
+
+  .login__row {
+    margin-bottom: 25px;
+
+    &--password {
+      margin-bottom: 0px;
+    }
+  }
+  .login__password-show {
+    right: 20px;
+  }
+
+  .login__link-password {
+    margin-top: 7px;
+    order: initial;
+    font-size: 12px;
+    line-height: 17px;
+    text-align: right;
+  }
+
+  .login__submit {
+    min-height: 60px;
+    margin-top: 25px;
+    margin-bottom: 0;
+    font-size: 18px;
+    line-height: 21px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .login__wrapper {
+    width: 544px;
+    padding: 56px;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateX(0px);
+  }
+  10% {
+    transform: translateX(-25px);
+  }
+  20% {
+    transform: translateX(+25px);
+  }
+  30% {
+    transform: translateX(-20px);
+  }
+  40% {
+    transform: translateX(+20px);
+  }
+  50% {
+    transform: translateX(-10px);
+  }
+  60% {
+    transform: translateX(+10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

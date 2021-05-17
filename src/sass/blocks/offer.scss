@@ -1,0 +1,132 @@
+.offer {
+  background-color: #f6f7ff;
+  border-radius: 4px;
+}
+
+.offer__wrapper {
+  padding: 35px 15px 40px;
+  display: flex;
+  flex-direction: column;
+  &--message {
+    padding-bottom: 35px;
+  }
+}
+
+.offer__title {
+  margin-bottom: 23px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 25px;
+  color: #1f1e25;
+  &--message {
+    margin-bottom: 11px;
+  }
+}
+
+.offer__list {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.offer__item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 14px;
+}
+
+.offer dt {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 25px;
+  color: #1f1e25;
+}
+
+.offer dd {
+  font-size: 16px;
+  line-height: 22px;
+  color: #394959;
+}
+
+.offer__button {
+  @include button;
+  min-height: 51px;
+}
+
+@media (min-width: $tablet-width) {
+  .offer__wrapper {
+    padding: 53px 60px 60px;
+
+    &--message {
+      padding-bottom: 35px;
+    }
+  }
+
+  .offer__list {
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-bottom: 8px;
+  }
+
+  .offer__item {
+    width: 40.7%;
+    margin-bottom: 26px;
+  }
+
+  .offer__messge {
+    max-width: 285px;
+  }
+  .offer__title {
+    margin-bottom: 24px;
+    font-size: 22px;
+    line-height: 31px;
+
+    &--message {
+      margin-bottom: 11px;
+    }
+  }
+
+  .offer dt {
+    margin-bottom: 2px;
+    font-size: 22px;
+    line-height: 31px;
+    color: #1f1e25;
+  }
+
+  .offer dd {
+    font-size: 16px;
+    line-height: 22px;
+    color: #394959;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .offer {
+    margin-top: 7px;
+    margin-bottom: 0;
+  }
+  .offer__wrapper {
+    padding: 53px 58px 60px;
+    &--message {
+      padding-bottom: 54px;
+    }
+  }
+
+  .offer__list {
+    justify-content: space-between;
+    margin-bottom: 8px;
+  }
+
+  .offer__item {
+    display: flex;
+    width: auto;
+    min-width: 157px;
+    margin-bottom: 26px;
+  }
+
+  .offer__button {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}

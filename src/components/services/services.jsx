@@ -45,6 +45,7 @@ const Services = () => {
         showArrows={false}
         showStatus={false}
         stopOnHover={false}
+        showThumbs={false}
         dynamicHeight
         renderIndicator={(_onClickHandler, isSelected, index) => (
           <SliderBullet isSelected={isSelected} index={index} />

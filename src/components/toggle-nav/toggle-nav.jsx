@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const ToggleNav = ({ className, onClick }) => {
   return (
@@ -6,6 +7,11 @@ const ToggleNav = ({ className, onClick }) => {
       <span className="visually-hidden">Меню</span>
     </button>
   );
+};
+
+ToggleNav.propTypes = {
+  className: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired,
 };
 
 export default ToggleNav;

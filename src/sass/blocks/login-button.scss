@@ -8,6 +8,8 @@
   background-size: 14px 16px;
   border: none;
   cursor: pointer;
+  @include hover;
+  @include active;
 
   .login-button__text {
     display: none;

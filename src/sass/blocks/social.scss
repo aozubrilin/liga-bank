@@ -6,6 +6,11 @@
   padding: 0;
 }
 
+.social__link {
+  @include hover;
+  @include active;
+}
+
 @media (min-width: $desktop-width) {
   .social {
     min-width: 16.5%;
