@@ -26,7 +26,7 @@
 .offer__list {
   display: flex;
   flex-direction: column;
-  margin-bottom: 15px;
+  margin-bottom: 17px;
 }
 
 .offer__item {
@@ -55,7 +55,7 @@
 
 @media (min-width: $tablet-width) {
   .offer__wrapper {
-    padding: 53px 60px 60px;
+    padding: 55px 60px 60px;
 
     &--message {
       padding-bottom: 35px;
@@ -107,7 +107,7 @@
     margin-bottom: 0;
   }
   .offer__wrapper {
-    padding: 53px 58px 60px;
+    padding: 56px 58px 60px;
     &--message {
       padding-bottom: 54px;
     }

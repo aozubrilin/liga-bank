@@ -40,7 +40,7 @@
 }
 
 .form-credit__legend {
-  margin-bottom: 14px;
+  margin-bottom: 16px;
   font-size: 16px;
   font-weight: 500;
   line-height: 22px;
@@ -118,6 +118,10 @@
   border: none;
 }
 
+.form-credit__label {
+  margin-bottom: 10px;
+}
+
 @media (min-width: $tablet-width) {
   .form-credit__legend {
     margin-bottom: 18px;
@@ -131,7 +135,7 @@
       margin-bottom: 0px;
 
       .form-credit__legend {
-        margin-bottom: 13px;
+        margin-bottom: 14px;
       }
 
       .form-credit__field {
@@ -174,10 +178,14 @@
       .form-credit__field {
         margin-bottom: 19px;
       }
+
+      .form-credit__field:last-child {
+        margin-bottom: 0px;
+      }
     }
   }
 
   .form-credit__field-checkbox {
-    margin-top: 20px;
+    margin-top: 18px;
   }
 }
