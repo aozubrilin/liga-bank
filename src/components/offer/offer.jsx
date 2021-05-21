@@ -2,7 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useSelector, useDispatch } from 'react-redux';
 import { setIsRequestFormOpen } from '../../store/action';
-import { getTextWithRuble, getInitialFeePercen } from '../../utils';
+import {
+  getTextWithRuble,
+  getInitialFeePercen,
+  isRangeInputValue,
+} from '../../utils';
 import {
   CreditParams,
   PART_PAYMENT_OF_INCOME,
@@ -25,6 +29,12 @@ const Offer = ({ className, target }) => {
   const initialFeePercent = getInitialFeePercen(initialFee, cost);
   const isMortage = target === CreditTarget.MORTAGE;
   const creditData = CreditParams[target];
+
+  const isCostValid = isRangeInputValue(
+    cost,
+    creditData.cost.min,
+    creditData.cost.max
+  );
 
   const onButtonRequestClick = () => {
     dispatch(setIsRequestFormOpen(true));
@@ -113,6 +123,7 @@ const Offer = ({ className, target }) => {
             className="offer__button"
             type="button"
             onClick={onButtonRequestClick}
+            disabled={!isCostValid}
           >
             Оформить заявку
           </button>

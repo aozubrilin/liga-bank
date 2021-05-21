@@ -1,7 +1,4 @@
 .map {
-  min-width: 320px;
-  max-width: 1366px;
-  margin: 0 auto;
   margin-bottom: 54px;
 }
 
@@ -28,9 +25,16 @@
   color: $font-black-color;
 }
 
+@media (max-width: 767px) {
+  .map__wrapper {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
 @media (min-width: $tablet-width) {
   .map {
-    padding: 0 45px;
+    // padding: 0 45px;
     margin-bottom: 73px;
   }
 
@@ -49,7 +53,7 @@
 
 @media (min-width: $desktop-width) {
   .map {
-    padding: 0 98px;
+    // padding: 0 98px;
     margin-bottom: 105px;
   }
   .map__title {

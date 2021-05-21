@@ -61,6 +61,29 @@ const CreditStepSecond = ({ target }) => {
   };
 
   const handBattonPlusClick = () => {
+    if (cost < creditData.cost.min) {
+      dispatch(changeCost(creditData.cost.min));
+      dispatch(
+        changeInitialFee(
+          getInitialFee(creditData.initialFeePercent.min, creditData.cost.min)
+        )
+      );
+      return;
+    }
+
+    if (cost + creditData.cost.step > creditData.cost.max) {
+      dispatch(
+        changeCost(
+          checkMinMaxValue(cost, creditData.cost.min, creditData.cost.max)
+        )
+      );
+      dispatch(
+        changeInitialFee(
+          getInitialFee(creditData.initialFeePercent.min, creditData.cost.max)
+        )
+      );
+      return;
+    }
     dispatch(changeCost(cost + creditData.cost.step));
     dispatch(
       changeInitialFee(
@@ -74,6 +97,29 @@ const CreditStepSecond = ({ target }) => {
   };
 
   const handBattonMinusClick = () => {
+    if (cost > creditData.cost.max) {
+      dispatch(changeCost(creditData.cost.max));
+      dispatch(
+        changeInitialFee(
+          getInitialFee(creditData.initialFeePercent.min, creditData.cost.max)
+        )
+      );
+      return;
+    }
+    if (cost - creditData.cost.step < creditData.cost.min) {
+      dispatch(
+        changeCost(
+          checkMinMaxValue(cost, creditData.cost.min, creditData.cost.max)
+        )
+      );
+      dispatch(
+        changeInitialFee(
+          getInitialFee(creditData.initialFeePercent.min, creditData.cost.min)
+        )
+      );
+      return;
+    }
+
     dispatch(changeCost(cost - creditData.cost.step));
     dispatch(
       changeInitialFee(
@@ -100,7 +146,6 @@ const CreditStepSecond = ({ target }) => {
 
   const handlInitialFeeRangeChange = (evt) => {
     const value = Number(evt.target.value);
-    console.log(value);
     dispatch(changePercent(value));
     dispatch(changeInitialFee(getInitialFee(value, cost)));
   };

@@ -1,6 +1,5 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-
 import Offer from '../offer/offer';
 import CreditStepFirst from '../credit-step-first/credit-step-first';
 import CreditStepSecond from '../credit-step-second/credit-step-second';

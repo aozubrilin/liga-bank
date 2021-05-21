@@ -1,10 +1,21 @@
 .nav {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   list-style: none;
+  box-sizing: border-box;
 }
 
 @media (max-width: 767px) {
+  .nav {
+    flex-wrap: nowrap;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-bottom: 65px;
+    &--footer {
+      padding-bottom: 0px;
+    }
+  }
   .nav--close {
     display: none;
   }
@@ -103,6 +114,8 @@
   }
 
   .nav--footer {
+    flex-direction: column;
+    flex-wrap: nowrap;
     .nav__item {
       margin-right: 0;
 

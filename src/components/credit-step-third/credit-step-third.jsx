@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import NumberFormat from 'react-number-format';
 import {
@@ -6,8 +6,9 @@ import {
   getTextWithYears,
   extend,
   validateField,
+  isRangeInputValue,
 } from '../../utils';
-import { CreditTarget } from '../../const';
+import { CreditTarget, CreditParams } from '../../const';
 import { saveUserDataLocalStorage } from '../../services/local-storage';
 import {
   saveUserData,
@@ -19,7 +20,6 @@ import {
 
 const CreditStepThird = () => {
   const dispatch = useDispatch();
-
   const target = useSelector(({ data }) => data.creditTarget);
   const cost = useSelector(({ data }) => data.cost);
   const requestNumber = useSelector(({ data }) => data.requestNumber);
@@ -27,6 +27,20 @@ const CreditStepThird = () => {
   const duration = useSelector(({ data }) => data.duration);
   const user = useSelector(({ user }) => user.dataUser);
   const isMortage = target === CreditTarget.MORTAGE;
+
+  const creditData = CreditParams[target];
+
+  const isCostValid = useMemo(
+    () => isRangeInputValue(cost, creditData.cost.min, creditData.cost.max),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [cost]
+  );
+
+  useEffect(() => {
+    if (!isCostValid) {
+      dispatch(setIsRequestFormOpen(false));
+    }
+  }, [dispatch, isCostValid]);
 
   const [validError, setValidError] = useState({});
   const [userData, setUserData] = useState({

@@ -46,7 +46,7 @@
   }
 
   .main-nav__login-button {
-    margin-left: 0 auto;
+    margin-left: auto;
   }
 
   .main-nav__logo {
@@ -55,6 +55,9 @@
 }
 
 @media (min-width: $desktop-width) {
+  .main-nav__nav {
+    min-width: 500px;
+  }
   .main-nav__logo {
     margin-right: 9.1%;
   }
