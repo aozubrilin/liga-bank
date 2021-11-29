@@ -1,4 +1,4 @@
-# Личный проект [«Большое путешествие»](https://aozubrilin.github.io/liga-bank/)
+# Личный проект [«Лига Банк»](https://aozubrilin.github.io/liga-bank/)
 
 ### О проекте:
 
